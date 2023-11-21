@@ -87,7 +87,7 @@ def preprocess_text(text):
 def predict_sentiment(sentence):
     # Tokenisasi dan padding pada kalimat yang ingin diprediksi
     sequences = tokenizer.texts_to_sequences([sentence])
-    padded = pad_sequences(sequences, maxlen=10000, dtype='int32', value=0)
+    padded = pad_sequences(sequences, maxlen=37, dtype='int32', value=0)
 
     # Melakukan prediksi sentimen untuk kalimat yang ingin diprediksi
     prediction = model.predict(padded)
