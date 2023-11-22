@@ -10,9 +10,6 @@ from nltk.corpus import stopwords
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
 import subprocess
 
-# Install dependencies
-subprocess.run(["pip", "install", "tensorflow"])
-
 # Load model
 model = load_model("model/sentiment_model.h5")
 
