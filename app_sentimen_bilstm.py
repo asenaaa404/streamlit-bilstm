@@ -102,11 +102,15 @@ input_text = st.text_area("Enter a sentence:")
 
 # Tombol untuk melakukan prediksi
 if st.button("Predict Sentiment"):
-    # Preprocess text
-    preprocessed_text = preprocess_text(input_text)
+    if not input_text:
+        st.warning("Please enter a sentence.")
+    else:
+        # Preprocess text
+        preprocessed_text = preprocess_text(input_text)
 
-    # Predict sentiment
-    sentiment_prediction = predict_sentiment(preprocessed_text)
+        # Predict sentiment
+        sentiment_prediction = predict_sentiment(preprocessed_text)
 
-    # Tampilkan hasil prediksi
-    st.success(f"Sentiment: {sentiment_prediction}")
+        # Tampilkan hasil prediksi
+        st.success(f"Sentiment: {sentiment_prediction}")
+
