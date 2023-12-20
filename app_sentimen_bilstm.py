@@ -114,21 +114,3 @@ if st.button("Predict Sentiment"):
         # Tampilkan hasil prediksi
         st.success(f"Sentiment: {sentiment_prediction}")
 
-        # Menampilkan hasil ekstraksi fitur
-        st.subheader("Feature Extraction Result:")
-        # ... (code untuk menampilkan hasil ekstraksi fitur)
-
-        # Menampilkan hasil evaluasi untuk setiap fold
-        st.subheader("Evaluation Results for Each Fold:")
-        for fold in range(n_splits):
-            st.write(f"Fold {fold + 1}:")
-            st.write(f"Loss: {losses[fold]}, Accuracy: {accuracies[fold]}")
-            st.write("Confusion Matrix:")
-            st.write(confusion_matrices[fold])
-            st.write("Classification report:")
-            st.write(classification_reports[fold])
-            st.write("\n")
-
-        # Menampilkan hasil akhir evaluasi
-        st.subheader("Final Evaluation Results:")
-        st.write(f"Average Loss: {np.mean(losses)}, Average Accuracy: {np.mean(accuracies)}")
